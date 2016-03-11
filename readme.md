@@ -12,7 +12,7 @@ The app should be built entirely using AngularJS (no jQuery).
 
 ![Mockup](mockup.jpg)
 
-##Part 1
+##Requirements
 
 Create a 3 column layout with bootstrap. Each column should contain a list (ul or table).
 
@@ -34,7 +34,7 @@ Create a 3 column layout with bootstrap. Each column should contain a list (ul o
 
 Once all fruit / vegetables are sorted (the middle list is empty) all incorrect items in the other two lists should be highlighted in red. If all of the items are in the correct list the app should tell the user that they won.
 
-##Part 2
+##Bonus
 
 Add an up / down arrow to each list item in the fruit and vegetable list (not the middle list) which when clicked will move the item up / down the list.
 
