@@ -38,3 +38,9 @@ Once all fruit / vegetables are sorted (the middle list is empty) all incorrect 
 Add an up / down arrow to each list item in the fruit and vegetable list (not the middle list) which when clicked will move the item up / down the list.
 
 Require the user to alphabetize the list after sorting in to vegetables / fruit.
+
+---
+
+## Licensing
+1. All content is licensed under a CC-BY-NC-SA 4.0 license.
+2. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
