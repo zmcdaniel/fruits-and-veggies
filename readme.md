@@ -6,6 +6,7 @@ The app should be built entirely using AngularJS (no jQuery).
 
 ##Getting Started
 
+* Fork and clone this repository
 * Run `npm install` to install dependencies
   * `npm start` - start the BrowserSync server
   * `npm run lint:css` - lint CSS
