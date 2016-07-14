@@ -1,6 +1,6 @@
-//this file defines 2 arrays for you
+// this file defines 2 arrays for you
 
-var fruit = [
+var fruits = [
   'Apple',
   'Apricot',
   'Banana',
@@ -53,7 +53,7 @@ var fruit = [
   'Raspberry',
   'Strawberry',
   'Ugli fruit'
-  ];
+];
 
 var vegetables = [
   'Artichoke',
@@ -112,4 +112,4 @@ var vegetables = [
   'Potato',
   'Sweet potato',
   'Water chestnut'
-  ];
+];
