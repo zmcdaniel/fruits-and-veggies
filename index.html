@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="FruitVeggieApp">
     <head>
         <title>Fruit and Veggies</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
@@ -8,20 +8,59 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
         <script src="js/fruits_and_veggies_test.js"></script>
         <script src="js/app.js"></script>
+
+        <style>
+            ul {
+                list-style: none;
+                text-align: center;
+                font-size: 20px
+            }
+        </style>
     </head>
-    <body>
+    <body ng-controller="FruitVeggieCtrl">
         <div class="container">
             <h1>Fruit and Veggies</h1>
             <div class="row">
+
                 <div class="col-sm-4">
-                    col 1
+                    <h3>Fruits</h3>
+                    <ul>
+                        <li ng-repeat="fruit in fruits track by $index" class="well">
+                            {{ fruit }}
+                            <button class="btn btn-primary right-arrow" ng-click="moveRight($index)">
+                                &rarr;
+                            </button>
+                        </li>
+                    </ul>
                 </div>
+
                 <div class="col-sm-4">
-                    col 2
+                    <h3>Pool</h3>
+                    <ul>
+                        <li ng-repeat="produce in allProduce track by $index" class="well">
+                            <button class="btn btn-primary left-arrow" ng-click="moveLeft($index)">
+                                &larr;
+                            </button>
+                            {{ produce }}
+                            <button class="btn btn-primary right-arrow" ng-click="moveRight($index)">
+                                &rarr;
+                            </button>
+                        </li>
+                    </ul>
                 </div>
+
                 <div class="col-sm-4">
-                    col 3
+                    <h3>Veggies</h3>
+                    <ul>
+                        <li ng-repeat="veggie in veggies track by index" class="well">
+                            {{ veggie }}
+                            <button class="btn btn-primary left-arrow" ng-click="moveLeft($index)">
+                                &larr;
+                            </button>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </body>
