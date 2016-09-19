@@ -10,9 +10,22 @@ app.run(function(){
 });
 
 app.controller("FruitVeggieCtrl", ["$scope", function($scope){
-    $scope.allProduce = vegetables.concat(fruits);
+
+    // Fisher-Yates shuffle algorithm
+    $scope.shuffle = function(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    };
+
+    $scope.allProduce = $scope.shuffle(vegetables.concat(fruits));
     $scope.fruits = [];
     $scope.veggies = [];
+
 
     $scope.moveLeft = function(index){
         $scope.fruits.push($scope.allProduce[index]);
