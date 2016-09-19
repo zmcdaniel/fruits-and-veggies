@@ -27,14 +27,23 @@ app.controller("FruitVeggieCtrl", ["$scope", function($scope){
     $scope.veggies = [];
 
 
-    $scope.moveLeft = function(index){
-        $scope.fruits.push($scope.allProduce[index]);
-        $scope.allProduce.splice(index, 1);
+    $scope.arrowClick = function(newArray, i, currentArray) {
+        $scope[newArray].push($scope[currentArray][i]);
+        $scope[currentArray].splice(i, 1);
     };
 
-    $scope.moveRight = function(index){
-        $scope.veggies.push($scope.allProduce[index]);
-        $scope.allProduce.splice(index, 1);
+    $scope.checkIfCorrect = function(currentProduce, currentArray) {
+        if(currentArray === 'fruits'){
+            if(fruits.indexOf(currentProduce) === -1){
+                return true;
+            }
+        } else {
+            if(currentArray === 'vegetables'){
+                if(vegetables.indexOf(currentProduce) === -1){
+                    return true;
+                }
+            }
+        }
     };
 
 }]);

@@ -15,11 +15,30 @@
                 text-align: center;
                 font-size: 20px
             }
+
+            .isCorrect {
+                background-color: seagreen;
+            }
+
+            .isIncorrect {
+                background-color: red;
+            }
+
+
         </style>
     </head>
     <body ng-controller="FruitVeggieCtrl">
+
         <div class="container">
             <h1>Fruit and Veggies</h1>
+
+            <div class="row">
+                <div ng-show="win" ng-class="{'has-success': win}">
+                    Congrats! You Won!
+                </div>
+            </div>
+
+
             <div class="row">
 
                 <div class="col-sm-4">
@@ -27,7 +46,7 @@
                     <ul>
                         <li ng-repeat="fruit in fruits track by $index" class="well">
                             {{ fruit }}
-                            <button class="btn btn-primary right-arrow" ng-click="moveRight($index)">
+                            <button class="btn btn-primary right-arrow" ng-click="arrowClick('allProduce', $index, 'fruits')">
                                 &rarr;
                             </button>
                         </li>
@@ -38,11 +57,11 @@
                     <h3>Pool</h3>
                     <ul>
                         <li ng-repeat="produce in allProduce track by $index" class="well">
-                            <button class="btn btn-primary left-arrow" ng-click="moveLeft($index)">
+                            <button class="btn btn-primary left-arrow" ng-click="arrowClick('fruits', $index, 'allProduce')">
                                 &larr;
                             </button>
                             {{ produce }}
-                            <button class="btn btn-primary right-arrow" ng-click="moveRight($index)">
+                            <button class="btn btn-primary right-arrow" ng-click="arrowClick('veggies', $index, 'allProduce')">
                                 &rarr;
                             </button>
                         </li>
@@ -54,7 +73,7 @@
                     <ul>
                         <li ng-repeat="veggie in veggies track by index" class="well">
                             {{ veggie }}
-                            <button class="btn btn-primary left-arrow" ng-click="moveLeft($index)">
+                            <button class="btn btn-primary left-arrow" ng-click="arrowClick('allProduce', $index, 'veggies')">
                                 &larr;
                             </button>
                         </li>
